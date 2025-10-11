@@ -22,14 +22,14 @@ comment on table ksiegowosc.godziny is 'Godziny pracy pracowników.';
 create table ksiegowosc.pensja (
     id_pensji int primary key,
     stanowisko varchar(50),
-    kwota money
+    kwota numeric(10,2)
 );
 comment on table ksiegowosc.pensja is 'Pensje na stanowiskach.';
 
 create table ksiegowosc.premia (
     id_premii int primary key,
     rodzaj varchar(50),
-    kwota money
+    kwota numeric(10,2)
 );
 comment on table ksiegowosc.premia is 'Rodzaje premii.';
 
