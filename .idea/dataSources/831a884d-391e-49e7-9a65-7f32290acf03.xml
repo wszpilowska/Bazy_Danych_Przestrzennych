@@ -3,7 +3,7 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.53">
     <root id="1">
       <DateStyle>dmy</DateStyle>
-      <IntrospectionStateNumber>772</IntrospectionStateNumber>
+      <IntrospectionStateNumber>784</IntrospectionStateNumber>
       <ServerVersion>18.0</ServerVersion>
       <StartupTime>1760194712</StartupTime>
       <TimeZones>true ACDT
@@ -800,7 +800,7 @@ false Zulu
 14813||10|C|G
 14813||-9223372036854775808|U|G
 14813||10|U|G</Grants>
-      <IntrospectionStateNumber>772</IntrospectionStateNumber>
+      <IntrospectionStateNumber>784</IntrospectionStateNumber>
       <ObjectId>16388</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4323,6 +4323,12 @@ false Zulu
       <OwnerName>postgres</OwnerName>
     </schema>
     <schema id="271" parent="2" name="ksiegowosc">
+      <AutoIntrospectionLevel>3</AutoIntrospectionLevel>
+      <LastIntrospectionL1Xid>784</LastIntrospectionL1Xid>
+      <LastIntrospectionL2Xid>784</LastIntrospectionL2Xid>
+      <LastIntrospectionL3Xid>784</LastIntrospectionL3Xid>
+      <LastIntrospectionLevel>3</LastIntrospectionLevel>
+      <LastIntrospectionLocalTimestamp>2025-10-11.16:06:10</LastIntrospectionLocalTimestamp>
       <ObjectId>16390</ObjectId>
       <StateNumber>770</StateNumber>
       <OwnerName>postgres</OwnerName>
@@ -7802,5 +7808,296 @@ false Zulu
       <StateNumber>546</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
     </schema>
+    <table id="525" parent="271" name="godziny">
+      <Comment>Godziny pracy pracowników.</Comment>
+      <DetailsLevel>2</DetailsLevel>
+      <ObjectId>16397</ObjectId>
+      <StateNumber>775</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>postgres</OwnerName>
+    </table>
+    <table id="526" parent="271" name="pensja">
+      <Comment>Pensje na stanowiskach.</Comment>
+      <DetailsLevel>2</DetailsLevel>
+      <ObjectId>16408</ObjectId>
+      <StateNumber>781</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>postgres</OwnerName>
+    </table>
+    <table id="527" parent="271" name="pracownicy">
+      <Comment>Dane pracowników firmy.</Comment>
+      <DetailsLevel>2</DetailsLevel>
+      <ObjectId>16391</ObjectId>
+      <StateNumber>775</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>postgres</OwnerName>
+    </table>
+    <table id="528" parent="271" name="premia">
+      <Comment>Rodzaje premii.</Comment>
+      <DetailsLevel>2</DetailsLevel>
+      <ObjectId>16414</ObjectId>
+      <StateNumber>781</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>postgres</OwnerName>
+    </table>
+    <table id="529" parent="271" name="wynagrodzenie">
+      <Comment>Wynagrodzenia pracowników.</Comment>
+      <DetailsLevel>2</DetailsLevel>
+      <ObjectId>16420</ObjectId>
+      <StateNumber>781</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>postgres</OwnerName>
+    </table>
+    <column id="530" parent="525" name="id_godziny">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>775</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="531" parent="525" name="data">
+      <Position>2</Position>
+      <StateNumber>775</StateNumber>
+      <StoredType>date|0s</StoredType>
+      <TypeId>1082</TypeId>
+    </column>
+    <column id="532" parent="525" name="liczba_godzin">
+      <Position>3</Position>
+      <StateNumber>775</StateNumber>
+      <StoredType>numeric(4,2 digit)|0s</StoredType>
+      <TypeId>1700</TypeId>
+    </column>
+    <column id="533" parent="525" name="id_pracownika">
+      <Position>4</Position>
+      <StateNumber>775</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <TypeId>23</TypeId>
+    </column>
+    <foreign-key id="534" parent="525" name="godziny_id_pracownika_fkey">
+      <ColNames>id_pracownika</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16403</ObjectId>
+      <StateNumber>775</StateNumber>
+      <RefKeyColPositions>1</RefKeyColPositions>
+      <RefTableId>16391</RefTableId>
+    </foreign-key>
+    <index id="535" parent="525" name="godziny_pkey">
+      <ColNames>id_godziny</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16401</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>775</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="536" parent="525" name="godziny_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16402</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>775</StateNumber>
+      <UnderlyingIndexId>16401</UnderlyingIndexId>
+    </key>
+    <column id="537" parent="526" name="id_pensji">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>777</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="538" parent="526" name="stanowisko">
+      <Position>2</Position>
+      <StateNumber>777</StateNumber>
+      <StoredType>varchar(50)|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="539" parent="526" name="kwota">
+      <Position>3</Position>
+      <StateNumber>777</StateNumber>
+      <StoredType>money|0s</StoredType>
+      <TypeId>790</TypeId>
+    </column>
+    <index id="540" parent="526" name="pensja_pkey">
+      <ColNames>id_pensji</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16412</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>777</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="541" parent="526" name="pensja_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16413</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>777</StateNumber>
+      <UnderlyingIndexId>16412</UnderlyingIndexId>
+    </key>
+    <column id="542" parent="527" name="id_pracownika">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>773</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="543" parent="527" name="imie">
+      <Position>2</Position>
+      <StateNumber>773</StateNumber>
+      <StoredType>varchar(50)|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="544" parent="527" name="nazwisko">
+      <Position>3</Position>
+      <StateNumber>773</StateNumber>
+      <StoredType>varchar(50)|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="545" parent="527" name="adres">
+      <Position>4</Position>
+      <StateNumber>773</StateNumber>
+      <StoredType>varchar(100)|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="546" parent="527" name="telefon">
+      <Position>5</Position>
+      <StateNumber>773</StateNumber>
+      <StoredType>varchar(15)|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="547" parent="527" name="pracownicy_pkey">
+      <ColNames>id_pracownika</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16395</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>773</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="548" parent="527" name="pracownicy_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16396</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>773</StateNumber>
+      <UnderlyingIndexId>16395</UnderlyingIndexId>
+    </key>
+    <column id="549" parent="528" name="id_premii">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>779</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="550" parent="528" name="rodzaj">
+      <Position>2</Position>
+      <StateNumber>779</StateNumber>
+      <StoredType>varchar(50)|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="551" parent="528" name="kwota">
+      <Position>3</Position>
+      <StateNumber>779</StateNumber>
+      <StoredType>money|0s</StoredType>
+      <TypeId>790</TypeId>
+    </column>
+    <index id="552" parent="528" name="premia_pkey">
+      <ColNames>id_premii</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16418</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>779</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="553" parent="528" name="premia_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16419</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>779</StateNumber>
+      <UnderlyingIndexId>16418</UnderlyingIndexId>
+    </key>
+    <column id="554" parent="529" name="id_wynagrodzenia">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>781</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="555" parent="529" name="data">
+      <Position>2</Position>
+      <StateNumber>781</StateNumber>
+      <StoredType>date|0s</StoredType>
+      <TypeId>1082</TypeId>
+    </column>
+    <column id="556" parent="529" name="id_pracownika">
+      <Position>3</Position>
+      <StateNumber>781</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="557" parent="529" name="id_godziny">
+      <Position>4</Position>
+      <StateNumber>781</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="558" parent="529" name="id_pensji">
+      <Position>5</Position>
+      <StateNumber>781</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="559" parent="529" name="id_premii">
+      <Position>6</Position>
+      <StateNumber>781</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <TypeId>23</TypeId>
+    </column>
+    <foreign-key id="560" parent="529" name="wynagrodzenie_id_pracownika_fkey">
+      <ColNames>id_pracownika</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16426</ObjectId>
+      <StateNumber>781</StateNumber>
+      <RefKeyColPositions>1</RefKeyColPositions>
+      <RefTableId>16391</RefTableId>
+    </foreign-key>
+    <foreign-key id="561" parent="529" name="wynagrodzenie_id_godziny_fkey">
+      <ColNames>id_godziny</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16431</ObjectId>
+      <StateNumber>781</StateNumber>
+      <RefKeyColPositions>1</RefKeyColPositions>
+      <RefTableId>16397</RefTableId>
+    </foreign-key>
+    <foreign-key id="562" parent="529" name="wynagrodzenie_id_pensji_fkey">
+      <ColNames>id_pensji</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16436</ObjectId>
+      <StateNumber>781</StateNumber>
+      <RefKeyColPositions>1</RefKeyColPositions>
+      <RefTableId>16408</RefTableId>
+    </foreign-key>
+    <foreign-key id="563" parent="529" name="wynagrodzenie_id_premii_fkey">
+      <ColNames>id_premii</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16441</ObjectId>
+      <StateNumber>781</StateNumber>
+      <RefKeyColPositions>1</RefKeyColPositions>
+      <RefTableId>16414</RefTableId>
+    </foreign-key>
+    <index id="564" parent="529" name="wynagrodzenie_pkey">
+      <ColNames>id_wynagrodzenia</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16424</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>781</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="565" parent="529" name="wynagrodzenie_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16425</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>781</StateNumber>
+      <UnderlyingIndexId>16424</UnderlyingIndexId>
+    </key>
   </database-model>
 </dataSource>
