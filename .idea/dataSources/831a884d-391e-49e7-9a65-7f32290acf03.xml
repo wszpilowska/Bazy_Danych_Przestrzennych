@@ -3,7 +3,7 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.53">
     <root id="1">
       <DateStyle>dmy</DateStyle>
-      <IntrospectionStateNumber>784</IntrospectionStateNumber>
+      <IntrospectionStateNumber>787</IntrospectionStateNumber>
       <ServerVersion>18.0</ServerVersion>
       <StartupTime>1760194712</StartupTime>
       <TimeZones>true ACDT
@@ -800,7 +800,7 @@ false Zulu
 14813||10|C|G
 14813||-9223372036854775808|U|G
 14813||10|U|G</Grants>
-      <IntrospectionStateNumber>784</IntrospectionStateNumber>
+      <IntrospectionStateNumber>787</IntrospectionStateNumber>
       <ObjectId>16388</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4343,11 +4343,11 @@ false Zulu
       <AutoIntrospectionLevel>3</AutoIntrospectionLevel>
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <LastIntrospectionL1Xid>772</LastIntrospectionL1Xid>
-      <LastIntrospectionL2Xid>772</LastIntrospectionL2Xid>
-      <LastIntrospectionL3Xid>772</LastIntrospectionL3Xid>
+      <LastIntrospectionL1Xid>787</LastIntrospectionL1Xid>
+      <LastIntrospectionL2Xid>787</LastIntrospectionL2Xid>
+      <LastIntrospectionL3Xid>787</LastIntrospectionL3Xid>
       <LastIntrospectionLevel>3</LastIntrospectionLevel>
-      <LastIntrospectionLocalTimestamp>2025-10-11.15:20:13</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2025-10-11.20:35:39</LastIntrospectionLocalTimestamp>
       <ObjectId>2200</ObjectId>
       <StateNumber>546</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
@@ -7820,7 +7820,7 @@ false Zulu
       <Comment>Pensje na stanowiskach.</Comment>
       <DetailsLevel>2</DetailsLevel>
       <ObjectId>16408</ObjectId>
-      <StateNumber>781</StateNumber>
+      <StateNumber>803</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
@@ -7836,7 +7836,7 @@ false Zulu
       <Comment>Rodzaje premii.</Comment>
       <DetailsLevel>2</DetailsLevel>
       <ObjectId>16414</ObjectId>
-      <StateNumber>781</StateNumber>
+      <StateNumber>804</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
@@ -7863,8 +7863,8 @@ false Zulu
     </column>
     <column id="532" parent="525" name="liczba_godzin">
       <Position>3</Position>
-      <StateNumber>775</StateNumber>
-      <StoredType>numeric(4,2 digit)|0s</StoredType>
+      <StateNumber>796</StateNumber>
+      <StoredType>numeric(6,2 digit)|0s</StoredType>
       <TypeId>1700</TypeId>
     </column>
     <column id="533" parent="525" name="id_pracownika">
@@ -7912,16 +7912,16 @@ false Zulu
     </column>
     <column id="539" parent="526" name="kwota">
       <Position>3</Position>
-      <StateNumber>777</StateNumber>
-      <StoredType>money|0s</StoredType>
-      <TypeId>790</TypeId>
+      <StateNumber>803</StateNumber>
+      <StoredType>numeric(10,2 digit)|0s</StoredType>
+      <TypeId>1700</TypeId>
     </column>
     <index id="540" parent="526" name="pensja_pkey">
       <ColNames>id_pensji</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16412</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>777</StateNumber>
+      <StateNumber>803</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
@@ -7994,16 +7994,16 @@ false Zulu
     </column>
     <column id="551" parent="528" name="kwota">
       <Position>3</Position>
-      <StateNumber>779</StateNumber>
-      <StoredType>money|0s</StoredType>
-      <TypeId>790</TypeId>
+      <StateNumber>804</StateNumber>
+      <StoredType>numeric(10,2 digit)|0s</StoredType>
+      <TypeId>1700</TypeId>
     </column>
     <index id="552" parent="528" name="premia_pkey">
       <ColNames>id_premii</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16418</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>779</StateNumber>
+      <StateNumber>804</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
