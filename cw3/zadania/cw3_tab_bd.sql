@@ -37,4 +37,14 @@ on st_dwithin(st_transform(poi.geom, 3068),st_transform(park.geom, 3068),
 )
 where poi.type = 'Sporting Goods Store';
 
+--8
+create table t2019_kar_bridges as
+select st_intersection(st_transform(r.geom, 3068), st_transform(w.geom, 3068)) as geom
+from t2019_kar_railways as r
+join t2019_kar_water_lines as w
+on st_intersects(
+st_transform(r.geom, 3068),
+st_transform(w.geom, 3068)
+);
+
 
